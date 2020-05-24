@@ -12,6 +12,13 @@
       <executable />
     </execution>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Pug File" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectId" id="1cH8g1qxDfosB2alzUHaOtKCJr9" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -22,12 +29,18 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.16.3" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\HASEEB\Desktop\cartqapp\public" />
+      <recent name="C:\Users\HASEEB\Desktop\cartqapp\views" />
+      <recent name="C:\Users\HASEEB\Desktop\cartqapp\routes" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\HASEEB\Desktop\cartqapp" />
       <recent name="C:\Users\HASEEB\Desktop\cartqapp\public\images" />
     </key>
   </component>
@@ -42,7 +55,10 @@
       <option name="presentableId" value="Default" />
       <updated>1590174268461</updated>
       <workItem from="1590174276241" duration="2558000" />
-      <workItem from="1590237029704" duration="4139000" />
+      <workItem from="1590237029704" duration="5629000" />
+      <workItem from="1590305426072" duration="321000" />
+      <workItem from="1590305892940" duration="160000" />
+      <workItem from="1590307851200" duration="752000" />
     </task>
     <servers />
   </component>
@@ -54,25 +70,25 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="633" y="319" key="EditFileWatcherDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590176162790" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1590175377077">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1590308615335">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1590175377077" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1590175377076">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1590308615335" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1590308615334">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1590175377076" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1590175377076">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1590308615334" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1590308615334">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1590175377076" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1590175377077">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1590308615334" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1590308615335">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590175377077" />
-    <state x="668" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1590237091249">
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590308615335" />
+    <state x="668" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1590307851186">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="668" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590237091249" />
+    <state x="668" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590307851186" />
   </component>
 </project>

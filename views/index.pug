@@ -1,66 +1,414 @@
 extends layout
 
 block content
-  div(class="container col-12 text-center")
-    h1(class="h1")= title
-      p(class="h3 text-danger") Welcome to #{title}
-
-        nav.navbar.navbar-expand-md.navbar-dark.bg-dark.mb-4
-          a.navbar-brand(href='#')
-          img(src='./images/img1.svg' alt='brandlogo' style='width:50px; height:50px;')
-          button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarCollapse', aria-controls='navbarCollapse', aria-expanded='false', aria-label='Toggle navigation')
-            span.navbar-toggler-icon
-          #navbarCollapse.collapse.navbar-collapse
-            ul.navbar-nav.mr-auto
-              li.nav-item.active
-                a.nav-link(href='#') Home
-                  span.sr-only (current)
-              li.nav-item
-                a.nav-link(href='#') Link
-              li.nav-item
-                a.nav-link.disabled(href='#') Disabled
-            form.form-inline.mt-2.mt-md-0
-              input.form-control.mr-sm-2(type='text', placeholder='Search', aria-label='Search')
-              button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search
-
-  .main.container.row
-      .col-md-3.border-right
-        h1.display-4.m-b-2 Log In
-        form(method='POST' action='/login')
-          div.form-group
-            label(for='email2') Email
-            input.form-control(type='text' id='email1' placeholder='email' name='email')
-          div.form-group
-            label(for='password2') Password
-            input.form-control(type='password' id='password1' placeholder='password' name='password')
-          button.btn.btn-primary(type='submit') Log in
-
-      .col-md-4
-        h1.display-4.m-b-2 Sign Up
-        form(method='POST' action='/login')
-          div.form-group
-            label(for='email2') Email
-            input.form-control(type='text' id='email2' placeholder='email' name='email')
-          div.form-group
-            label(for='password2') Password
-            input.form-control(type='password' id='password2' placeholder='password' name='password')
-          button.btn.btn-primary(type='submit') Sign Up
-      .col-4
-            #carouselExampleIndicators.carousel.slide(data-ride='carousel')
-              ol.carousel-indicators
-                li.active(data-target='#carouselExampleIndicators' data-slide-to='0')
-                li(data-target='#carouselExampleIndicators' data-slide-to='1')
-                li(data-target='#carouselExampleIndicators' data-slide-to='2')
-              .carousel-inner
-                .carousel-item.active
-                  img.d-block.w-100(src='./images/img1.svg' alt='First slide')
-                .carousel-item
-                  img.d-block.w-100(src='...' alt='Second slide')
-                .carousel-item
-                  img.d-block.w-100(src='...' alt='Third slide')
-              a.carousel-control-prev(href='#carouselExampleIndicators' role='button' data-slide='prev')
-                span.carousel-control-prev-icon(aria-hidden='true')
-                span.sr-only Previous
-              a.carousel-control-next(href='#carouselExampleIndicators' role='button' data-slide='next')
-                span.carousel-control-next-icon(aria-hidden='true')
-                span.sr-only Next
+  nav#mainNav.navbar.navbar-dark.navbar-expand-lg.fixed-top.bg-dark
+    .container
+      a.navbar-brand(href='#page-top') Brand
+      button.navbar-toggler.navbar-toggler-right(data-toggle='collapse' data-target='#navbarResponsive' type='button' data-toogle='collapse' aria-controls='navbarResponsive' aria-expanded='false' aria-label='Toggle navigation')
+        i.fa.fa-bars
+      #navbarResponsive.collapse.navbar-collapse
+        ul.nav.navbar-nav.ml-auto.text-uppercase
+          li.nav-item(role='presentation')
+            a.nav-link.js-scroll-trigger(href='#services') Services
+          li.nav-item(role='presentation')
+            a.nav-link.js-scroll-trigger(href='#portfolio') Portfolio
+          li.nav-item(role='presentation')
+            a.nav-link.js-scroll-trigger(href='#about') About
+          li.nav-item(role='presentation')
+            a.nav-link.js-scroll-trigger(href='#team') Team
+          li.nav-item(role='presentation')
+            a.nav-link.js-scroll-trigger(href='#contact') Contact
+  header.masthead(style="background-image:url('/assets/img/header-bg.jpg');")
+    .container
+      .intro-text
+        .intro-lead-in
+          span Welcome To Our Studio!
+        .intro-heading.text-uppercase
+          span It&apos;s Nice To Meet You
+        a.btn.btn-primary.btn-xl.text-uppercase.js-scroll-trigger(role='button' href='#services') Tell me more
+  section#services
+    .container
+      .row
+        .col-lg-12.text-center
+          h2.text-uppercase.section-heading Services
+          h3.text-muted.section-subheading Lorem ipsum dolor sit amet consectetur
+      .row.text-center
+        .col-md-4
+          span.fa-stack.fa-4x
+            i.fa.fa-circle.fa-stack-2x.text-primary
+            i.fa.fa-shopping-cart.fa-stack-1x.fa-inverse
+          h4.section-heading E-Commerce
+          p.text-muted
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+        .col-md-4
+          span.fa-stack.fa-4x
+            i.fa.fa-circle.fa-stack-2x.text-primary
+            i.fa.fa-laptop.fa-stack-1x.fa-inverse
+          h4.section-heading Responsive Design
+          p.text-muted
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+        .col-md-4
+          span.fa-stack.fa-4x
+            i.fa.fa-circle.fa-stack-2x.text-primary
+            i.fa.fa-lock.fa-stack-1x.fa-inverse
+          h4.section-heading Web Security
+          p.text-muted
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+  section#portfolio.bg-light
+    .container
+      .row
+        .col-lg-12.text-center
+          h2.text-uppercase.section-heading Portfolio
+          h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
+      .row
+        .col-sm-6.col-md-4.portfolio-item
+          a.portfolio-link(href='#portfolioModal1' data-toggle='modal')
+            .portfolio-hover
+              .portfolio-hover-content
+                i.fa.fa-plus.fa-3x
+            img.img-fluid(src='assets/img/portfolio/1-thumbnail.jpg')
+          .portfolio-caption
+            h4 Threads
+            p.text-muted Illustration
+        .col-sm-6.col-md-4.portfolio-item
+          a.portfolio-link(href='#portfolioModal2' data-toggle='modal')
+            .portfolio-hover
+              .portfolio-hover-content
+                i.fa.fa-plus.fa-3x
+            img.img-fluid(src='assets/img/portfolio/2-thumbnail.jpg')
+          .portfolio-caption
+            h4 Explore
+            p.text-muted Graphic Design
+        .col-sm-6.col-md-4.portfolio-item
+          a.portfolio-link(href='#portfolioModal3' data-toggle='modal')
+            .portfolio-hover
+              .portfolio-hover-content
+                i.fa.fa-plus.fa-3x
+            img.img-fluid(src='assets/img/portfolio/3-thumbnail.jpg')
+          .portfolio-caption
+            h4 Finish
+            p.text-muted Identity
+        .col-sm-6.col-md-4.portfolio-item
+          a.portfolio-link(href='#portfolioModal4' data-toggle='modal')
+            .portfolio-hover
+              .portfolio-hover-content
+                i.fa.fa-plus.fa-3x
+            img.img-fluid(src='assets/img/portfolio/4-thumbnail.jpg')
+          .portfolio-caption
+            h4 Lines
+            p.text-muted Branding
+        .col-sm-6.col-md-4.portfolio-item
+          a.portfolio-link(href='#portfolioModal5' data-toggle='modal')
+            .portfolio-hover
+              .portfolio-hover-content
+                i.fa.fa-plus.fa-3x
+            img.img-fluid.img-fluid(src='assets/img/portfolio/5-thumbnail.jpg')
+          .portfolio-caption
+            h4 Southwest
+            p.text-muted Website Design
+        .col-sm-6.col-md-4.portfolio-item
+          a.portfolio-link(href='#portfolioModal6' data-toggle='modal')
+            .portfolio-hover
+              .portfolio-hover-content
+                i.fa.fa-plus.fa-3x
+            img.img-fluid(src='assets/img/portfolio/6-thumbnail.jpg')
+          .portfolio-caption
+            h4 Window
+            p.text-muted Photography
+  section#about
+    .container
+      .row
+        .col-lg-12.text-center
+          h2.text-uppercase About
+          h3.text-muted.section-subheading Lorem ipsum dolor sit amet consectetur.
+      .row
+        .col-lg-12
+          ul.list-group.timeline
+            li.list-group-item
+              .timeline-image
+                img.rounded-circle.img-fluid(src='assets/img/about/1.jpg')
+              .timeline-panel
+                .timeline-heading
+                  h4 2009-2011
+                  h4.subheading Our Humble Beginnings
+                .timeline-body
+                  p.text-muted
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
+            li.list-group-item.timeline-inverted
+              .timeline-image
+                img.rounded-circle.img-fluid(src='assets/img/about/2.jpg')
+              .timeline-panel
+                .timeline-heading
+                  h4 March 2011
+                  h4.subheading An Agency is Born
+                .timeline-body
+                  p.text-muted
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
+            li.list-group-item
+              .timeline-image
+                img.rounded-circle.img-fluid(src='assets/img/about/3.jpg')
+              .timeline-panel
+                .timeline-heading
+                  h4 December 2012
+                  h4.subheading Transition to Full Service
+                .timeline-body
+                  p.text-muted
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
+            li.list-group-item.timeline-inverted
+              .timeline-image
+                img.rounded-circle.img-fluid(src='assets/img/about/4.jpg')
+              .timeline-panel
+                .timeline-heading
+                  h4 July 2014
+                  h4.subheading Phase Two Expansion
+                .timeline-body
+                  p.text-muted
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
+            li.list-group-item.timeline-inverted
+              .timeline-image
+                h4
+                  | Be Part
+                  br
+                  | &nbsp;Of Our
+                  br
+                  | &nbsp;Story!
+  section#team.bg-light
+    .container
+      .row
+        .col-sm-4
+          .team-member
+            img.rounded-circle.mx-auto(src='assets/img/team/1.jpg')
+            h4 Kay Garland
+            p.text-muted Lead Designer
+            ul.list-inline.social-buttons
+              li.list-inline-item
+                a(href='#')
+                  i.fa.fa-twitter
+              li.list-inline-item
+                a(href='#')
+                  i.fa.fa-facebook
+              li.list-inline-item
+                a(href='#')
+                  i.fa.fa-linkedin
+        .col-sm-4
+          .team-member
+            img.rounded-circle.mx-auto(src='assets/img/team/2.jpg')
+            h4 Larry Parker
+            p.text-muted Lead Marketer
+            ul.list-inline.social-buttons
+              li.list-inline-item
+                a(href='#')
+                  i.fa.fa-twitter
+              li.list-inline-item
+                a(href='#')
+                  i.fa.fa-facebook
+              li.list-inline-item
+                a(href='#')
+                  i.fa.fa-linkedin
+        .col-sm-4
+          .team-member
+            img.rounded-circle.mx-auto(src='assets/img/team/3.jpg')
+            h4 Diana Pertersen
+            p.text-muted Lead Developer
+            ul.list-inline.social-buttons
+              li.list-inline-item
+                a(href='#')
+                  i.fa.fa-twitter
+              li.list-inline-item
+                a(href='#')
+                  i.fa.fa-facebook
+              li.list-inline-item
+                a(href='#')
+                  i.fa.fa-linkedin
+  section.py-5
+    .container
+      .row
+        .col-sm-6.col-md-3
+          a(href='#')
+            img.img-fluid.d-block.mx-auto(src='assets/img/clients/creative-market.jpg')
+        .col-sm-6.col-md-3
+          a(href='#')
+            img.img-fluid.d-block.mx-auto(src='assets/img/clients/designmodo.jpg')
+        .col-sm-6.col-md-3
+          a(href='#')
+            img.img-fluid.d-block.mx-auto(src='assets/img/clients/envato.jpg')
+        .col-sm-6.col-md-3
+          a(href='#')
+            img.img-fluid.d-block.mx-auto(src='assets/img/clients/themeforest.jpg')
+  section#contact(style="background-image:url('assets/img/map-image.png');")
+    .container
+      .row
+        .col-lg-12.text-center
+          h2.text-uppercase.section-heading Contact Us
+          h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
+      .row
+        .col-lg-12
+          form#contactForm(name='contactForm' novalidate='novalidate')
+            .form-row
+              .col.col-md-6
+                .form-group
+                  input#name.form-control(type='text' required='' placeholder='Your Name *')
+                  small.form-text.text-danger.flex-grow-1.help-block.lead
+                .form-group
+                  input#email.form-control(type='email' required='' placeholder='Your Email *')
+                  small.form-text.text-danger.help-block.lead
+                .form-group
+                  input.form-control(type='tel' required='' placeholder='Your Phone *')
+                  small.form-text.text-danger.help-block.lead
+              .col-md-6
+                .form-group
+                  textarea#message.form-control(required='' placeholder='Your Message *')
+                  small.form-text.text-danger.help-block.lead
+              .col
+                .clearfix
+              .col-lg-12.text-center
+                #success
+                button#sendMessageButton.btn.btn-primary.btn-xl.text-uppercase(type='submit') Send Message
+  footer
+    .container
+      .row
+        .col-md-4
+          span.copyright Copyright&nbsp;&copy; Brand 2018
+        .col-md-4
+          ul.list-inline.social-buttons
+            li.list-inline-item
+              a(href='#')
+                i.fa.fa-twitter
+            li.list-inline-item
+              a(href='#')
+                i.fa.fa-facebook
+            li.list-inline-item
+              a(href='#')
+                i.fa.fa-linkedin
+        .col-md-4
+          ul.list-inline.quicklinks
+            li.list-inline-item
+              a(href='#') Privacy Policy
+            li.list-inline-item
+              a(href='#') Terms of Use
+  #portfolioModal1.modal.fade.portfolio-modal.text-center(role='dialog' tabindex='-1')
+    .modal-dialog.modal-lg(role='document')
+      .modal-content
+        .modal-body
+          .container
+            .row
+              .col-lg-8.mx-auto
+                .modal-body
+                  h2.text-uppercase Project Name
+                  p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
+                  img.img-fluid.d-block.mx-auto(src='assets/img/portfolio/1-full.jpg')
+                  p
+                    | Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae
+                    | cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!
+                  ul.list-unstyled
+                    li Date: January 2017
+                    li Client: Threads
+                    li Category: Illustration
+                  button.btn.btn-primary(type='button' data-dismiss='modal')
+                    i.fa.fa-times
+                    span &nbsp;Close Project
+  #portfolioModal2.modal.fade.portfolio-modal.text-center(role='dialog' tabindex='-1')
+    .modal-dialog.modal-lg(role='document')
+      .modal-content
+        .modal-body
+          .container
+            .row
+              .col-lg-8.mx-auto
+                .modal-body
+                  h2.text-uppercase Project Name
+                  p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
+                  img.img-fluid.d-block.mx-auto(src='assets/img/portfolio/2-full.jpg')
+                  p
+                    | Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae
+                    | cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!
+                  ul.list-unstyled
+                    li Date: January 2017
+                    li Client: Threads
+                    li Category: Illustration
+                  button.btn.btn-primary(type='button' data-dismiss='modal')
+                    i.fa.fa-times
+                    span &nbsp;Close Project
+  #portfolioModal3.modal.fade.portfolio-modal.text-center(role='dialog' tabindex='-1')
+    .modal-dialog.modal-lg(role='document')
+      .modal-content
+        .modal-body
+          .container
+            .row
+              .col-lg-8.mx-auto
+                .modal-body
+                  h2.text-uppercase Project Name
+                  p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
+                  img.img-fluid.d-block.mx-auto(src='assets/img/portfolio/3-full.jpg')
+                  p
+                    | Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae
+                    | cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!
+                  ul.list-unstyled
+                    li Date: January 2017
+                    li Client: Threads
+                    li Category: Illustration
+                  button.btn.btn-primary(type='button' data-dismiss='modal')
+                    i.fa.fa-times
+                    span &nbsp;Close Project
+  #portfolioModal4.modal.fade.portfolio-modal.text-center(role='dialog' tabindex='-1')
+    .modal-dialog.modal-lg(role='document')
+      .modal-content
+        .modal-body
+          .container
+            .row
+              .col-lg-8.mx-auto
+                .modal-body
+                  h2.text-uppercase Project Name
+                  p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
+                  img.img-fluid.d-block.mx-auto(src='assets/img/portfolio/4-full.jpg')
+                  p
+                    | Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae
+                    | cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!
+                  ul.list-unstyled
+                    li Date: January 2017
+                    li Client: Threads
+                    li Category: Illustration
+                  button.btn.btn-primary(type='button' data-dismiss='modal')
+                    i.fa.fa-times
+                    span &nbsp;Close Project
+  #portfolioModal5.modal.fade.portfolio-modal.text-center(role='dialog' tabindex='-1')
+    .modal-dialog.modal-lg(role='document')
+      .modal-content
+        .modal-body
+          .container
+            .row
+              .col-lg-8.mx-auto
+                .modal-body
+                  h2.text-uppercase Project Name
+                  p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
+                  img.img-fluid.d-block.mx-auto(src='assets/img/portfolio/5-full.jpg')
+                  p
+                    | Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae
+                    | cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!
+                  ul.list-unstyled
+                    li Date: January 2017
+                    li Client: Threads
+                    li Category: Illustration
+                  button.btn.btn-primary(type='button' data-dismiss='modal')
+                    i.fa.fa-times
+                    span &nbsp;Close Project
+  #portfolioModal6.modal.fade.portfolio-modal.text-center(role='dialog' tabindex='-1')
+    .modal-dialog.modal-lg(role='document')
+      .modal-content
+        .modal-body
+          .container
+            .row
+              .col-lg-8.mx-auto
+                .modal-body
+                  h2.text-uppercase Project Name
+                  p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
+                  img.img-fluid.d-block.mx-auto(src='assets/img/portfolio/6-full.jpg')
+                  p
+                    | Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae
+                    | cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!
+                  ul.list-unstyled
+                    li Date: January 2017
+                    li Client: Threads
+                    li Category: Illustration
+                  button.btn.btn-primary(type='button' data-dismiss='modal')
+                    i.fa.fa-times
+                    span &nbsp;Close Project
